@@ -192,7 +192,7 @@ typedef struct _vx_kernel *vx_kernel;
  */
 typedef struct _vx_parameter *vx_parameter;
 
-/*! \brief An opaque reference to a kernel node.
+/*! \brief 커널 노드에 대한 opaque 참조
  * \see vxCreateGenericNode
  * \ingroup group_node
  * \extends vx_reference

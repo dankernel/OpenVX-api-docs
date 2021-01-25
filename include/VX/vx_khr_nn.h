@@ -19,7 +19,7 @@
 
 /*!
  * \file
- * \brief The Khronos Extension for Deep Convolutional Networks Functions.
+ * \brief Deep Convolutional Networks 기능을위한 Khronos 확장.
  *
  * \defgroup group_cnn Extension: Deep Convolutional Networks API
  * \brief Convolutional Network Nodes.
@@ -44,19 +44,19 @@ CONVOLUTIONAL_NETWORK structs and enums
  */
 #define VX_LIBRARY_KHR_NN_EXTENSION (0x1)
 
-/*! \brief The list of Neural Network Extension Kernels.
+/*! \brief 신경망 확장 커널 목록입니다.
  * \ingroup group_cnn
  */
 enum vx_kernel_nn_ext_e {
-    /*! \brief The Neural Network Extension convolution Kernel.
+    /*! \brief 신경망 확장 컨볼 루션 커널.
     * \see group_cnn
     */
     VX_KERNEL_CONVOLUTION_LAYER = VX_KERNEL_BASE(VX_ID_KHRONOS, VX_LIBRARY_KHR_NN_EXTENSION) + 0x0,
-    /*! \brief The Neural Network Extension fully connected Kernel.
+    /*! \brief 신경망 확장 완전 연결 커널.
     * \see group_cnn
     */
     VX_KERNEL_FULLY_CONNECTED_LAYER = VX_KERNEL_BASE(VX_ID_KHRONOS, VX_LIBRARY_KHR_NN_EXTENSION) + 0x1,
-    /*! \brief The Neural Network Extension pooling Kernel.
+    /*! \brief 신경망 확장 풀링 커널.
     * \see group_cnn
     */
     VX_KERNEL_POOLING_LAYER = VX_KERNEL_BASE(VX_ID_KHRONOS, VX_LIBRARY_KHR_NN_EXTENSION) + 0x2,
@@ -82,7 +82,7 @@ enum vx_kernel_nn_ext_e {
     VX_KERNEL_LOCAL_RESPONSE_NORMALIZATION_LAYER = VX_KERNEL_BASE(VX_ID_KHRONOS, VX_LIBRARY_KHR_NN_EXTENSION) + 0x8,
 };
 
-/*! \brief NN extension type enums.
+/*! \brief NN 확장 유형 enums.
  * \ingroup group_cnn
  */
 enum vx_nn_enum_e
@@ -134,7 +134,7 @@ enum vx_nn_norm_type_e
 
 
 
-/*! \brief The Neural Network activation functions list.
+/*! \brief 신경망 활성화 함수 목록입니다.
  * \details
  * <table>
  * <tr><td> <B>Function name </B> <td> <B>Mathematical definition</B> <td> <B>Parameters</B> <td> <B>Parameters type</B>
@@ -173,7 +173,7 @@ enum vx_nn_type_e {
 	VX_TYPE_NN_ROI_POOL_PARAMS        = 0x027,/*!< \brief A <tt>\ref vx_nn_roi_pool_params_t</tt>. */
 };
 
-/*! \brief Input parameters for a convolution operation.
+/*! \brief 컨볼 루션 연산을위한 입력 매개 변수.
  * \ingroup group_cnn
  */
 typedef struct _vx_nn_convolution_params_t
@@ -212,8 +212,8 @@ typedef struct _vx_nn_roi_pool_params_t
 /*==============================================================================
     NN Nodes
 =============================================================================*/
-/*! \brief [Graph] Creates a Convolutional Network Convolution Layer Node.
- * \details This function implement Convolutional Network Convolution layer.
+/*! \brief [Graph] Convolutional Network Convolution Layer Node를 생성합니다..
+ * \details 이 함수는 Convolutional Network Convolution 계층을 구현합니다. 
  *  For fixed-point data types, a fixed point calculation is performed with round and saturate according to the number of accumulator bits. The number of the accumulator bits are implementation defined,
  * and should be at least 16.\n
  * round: rounding according the <tt>vx_round_policy_e</tt> enumeration. \n

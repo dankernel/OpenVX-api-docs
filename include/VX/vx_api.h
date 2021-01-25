@@ -30,17 +30,17 @@ extern "C" {
  CONTEXT
  =============================================================================*/
 
-/*! \brief Creates a <tt>\ref vx_context</tt>.
- * \details This creates a top-level object context for OpenVX.
- * \note This is required to do anything else.
- * \returns The reference to the implementation context <tt>\ref vx_context</tt>. Any possible errors
- * preventing a successful creation should be checked using <tt>\ref vxGetStatus</tt>.
+/*! \brief <tt>\ref vx_context</tt>를 생성 함.
+ * \details OpenVX에 대한 최상위 개체 컨텍스트를 만듭니다.
+ * \note 이것은 다른 작업을 수행하는 데 필요합니다.
+ * \returns 구현 컨텍스트 <tt>\ref vx_context</tt> 에 대한 참조입니다. 
+ * 성공적인 생성을 방해하는 모든 오류는 <tt>\ref vxGetStatus</tt>를 사용하여 확인해야합니다.
  * \ingroup group_context
  * \post <tt>\ref vxReleaseContext</tt>
  */
 VX_API_ENTRY vx_context VX_API_CALL vxCreateContext(void);
 
-/*! \brief Releases the OpenVX object context.
+/*! \brief OpenVX 개체 컨텍스트를 해제합니다.
  * \details All reference counted objects are garbage-collected by the return of this call.
  * No calls are possible using the parameter context after the context has been
  * released until a new reference from <tt>\ref vxCreateContext</tt> is returned.
@@ -56,7 +56,7 @@ VX_API_ENTRY vx_context VX_API_CALL vxCreateContext(void);
  */
 VX_API_ENTRY vx_status VX_API_CALL vxReleaseContext(vx_context *context);
 
-/*! \brief Retrieves the context from any reference from within a context.
+/*! \brief 컨텍스트 내의 모든 참조에서 컨텍스트를 검색합니다.
  * \param [in] reference The reference from which to extract the context.
  * \ingroup group_context
  * \return The overall context that created the particular
@@ -1047,7 +1047,7 @@ VX_API_ENTRY vx_parameter VX_API_CALL vxGetKernelParameterByIndex(vx_kernel kern
  GRAPH
  =============================================================================*/
 
-/*! \brief Creates an empty graph.
+/*! \brief 빈 그래프를 만듭니다.
  * \param [in] context The reference to the implementation context.
  * \returns A graph reference <tt>\ref vx_graph</tt>. Any possible errors preventing a
  * successful creation should be checked using <tt>\ref vxGetStatus</tt>.
@@ -1219,11 +1219,11 @@ VX_API_ENTRY vx_bool VX_API_CALL vxIsGraphVerified(vx_graph graph);
  NODE
  =============================================================================*/
 
-/*! \brief Creates a reference to a node object for a given kernel.
- * \details This node has no references assigned as parameters after completion.
- * The client is then required to set these parameters manually by <tt>\ref vxSetParameterByIndex</tt>.
- * When clients supply their own node creation functions (for use with User Kernels), this is the API
- * to use along with the parameter setting API.
+/*! \brief 주어진 커널에 대한 노드 개체에 대한 참조를 만듭니다.
+ * \details 이 노드에는 완료 후 매개 변수로 할당 된 참조가 없습니다.
+ * 그런 다음 클라이언트는 <tt>\ref vxSetParameterByIndex</tt>에 의해 이러한 매개 변수를 수동으로 설정해야합니다.
+ * 클라이언트가 자체 노드 생성 기능을 제공하는 경우 (사용자 커널과 함께 사용),
+ * 파라미터 설정 API와 함께 사용할 API입니다.
  * \param [in] graph The reference to the graph in which this node exists.
  * \param [in] kernel The kernel reference to associate with this new node.
  * \returns A node reference <tt>\ref vx_node</tt>. Any possible errors preventing a

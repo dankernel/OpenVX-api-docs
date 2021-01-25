@@ -27,7 +27,7 @@
 
 /*!
  * \file
- * \brief The top level OpenVX Header.
+ * \brief 최상위 OpenVX 헤더입니다.
  */
 
 /*! \brief Defines the length of the implementation name string, including the trailing zero.
@@ -57,17 +57,17 @@
 #include <VX/vx_api.h>
 #include <VX/vx_nodes.h>
 
-/*! \brief Defines the major version number macro.
+/*! \brief 주 버전 번호 매크로를 정의합니다..
  * \ingroup group_basic_features
  */
 #define VX_VERSION_MAJOR(x) ((vx_uint32)((vx_uint32)(x) & 0xFFU) << 8)
 
-/*! \brief Defines the minor version number macro.
+/*! \brief 부 버전 번호 매크로를 정의합니다.
  * \ingroup group_basic_features
  */
 #define VX_VERSION_MINOR(x) ((vx_uint32)((vx_uint32)(x) & 0xFFU) << 0)
 
-/*! \brief Defines the predefined version number for 1.0.
+/*! \brief 1.0에 대해 미리 정의 된 버전 번호를 정의합니다. 
  * \ingroup group_basic_features
  */
 #define VX_VERSION_1_0      (VX_VERSION_MAJOR(1) | VX_VERSION_MINOR(0))
@@ -82,12 +82,12 @@
  */
 #define VX_VERSION_1_2      (VX_VERSION_MAJOR(1) | VX_VERSION_MINOR(2))
 
-/*! \brief Defines the predefined version number for 1.3.
+/*! \brief 1.3에 대해 미리 정의 된 버전 번호를 정의합니다.
  * \ingroup group_basic_features
  */
 #define VX_VERSION_1_3      (VX_VERSION_MAJOR(1) | VX_VERSION_MINOR(3))
 
-/*! \brief Defines the OpenVX Version Number.
+/*! \brief OpenVX 버전 번호를 정의합니다.
  * \ingroup group_basic_features
  */
 #define VX_VERSION          (VX_VERSION_1_3)
